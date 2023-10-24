@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Results summary component</title>
+
+  <link rel="stylesheet" href="./style.css"> <!-- Feel free to remove these styles or customise in your own stylesheet 👍
+    -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- wrapper div to hold all content on page for easy centering -->
+  <div class="wrapper">
+
+    <!-- results content div for easy flexbox vertical centering & padding -->
+    <div id="results" class="content">
+      <h2 id="your-result">Your Result</h2>
+      <div class="score-circle">
+        <h1 id="score">76</h1>
+        <p id="score-total">of 100</p>
+      </div>
+
+      <h3 id="praise">Great</h3>
+      <p id="message">You scored higher than 65% of the people who have taken these tests.</p>
+    </div>
+
+    <div id="summary-box" class="content">
+      <div id="summary-blank" class="content">
+
+      </div>
+
+      <!-- summary content div for easy flexbox vertical centering & padding -->
+      <div id="summary" class="content">
+        <h2>Summary</h2>
+
+        <div id="reaction" class="trait">
+          <p><img src="./assets/images/icon-reaction.svg" alt="lightning bolt symbol">
+            <span id="reaction">Reaction</span>
+          </p>
+          <p><span class="sum-score">80</span> <span class="sum-out-of">/ 100</span>
+          </p>
+        </div>
+
+        <div id="memory" class="trait">
+          <p><img src="./assets/images/icon-memory.svg" alt="brain symbol">
+            <span id="memory">Memory</span>
+          </p>
+          <p><span class="sum-score">92</span> <span class="sum-out-of">/ 100</span>
+          </p>
+        </div>
+
+        <div id="verbal" class="trait">
+          <p><img src="./assets/images/icon-verbal.svg" alt="speechbox symbol">
+            <span id="verbal">Verbal</span>
+          </p>
+          <p><span class="sum-score">61</span> <span class="sum-out-of">/ 100</span>
+          </p>
+        </div>
+
+        <div id="visual" class="trait">
+          <p><img src="./assets/images/icon-visual.svg" alt="eye symbol">
+            <span id="visual">Visual</span>
+          </p>
+          <p><span class="sum-score">72</span> <span class="sum-out-of">/ 100</span>
+          </p>
+        </div>
+
+        <button>Continue</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Navine Rai</a>.
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+/* set background color, and center the content using height:100vh and flex */
+html,
+body {
+    background-color: #ECF2FF;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Hanken Grotesk', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* enclose all content in a grid layout with 1 x 1 */
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+/* give some space between content and card edges */
+.content {
+    padding: 2.5rem;
+    position: relative;
+    height: 27rem;
+}
+
+#results {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    width: 18rem;
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 10%;
+    z-index: 1;
+}
+
+#your-result {
+    color: #CAC9FF;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#score {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 4.5rem;
+    margin-bottom: 0;
+}
+
+#score-total {
+    font-size: 1.125rem;
+    color: #CAC9FF;
+}
+
+.score-circle {
+    border-radius: 50%;
+    width: 12.5rem;
+    height: 12.5rem;
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
+
+#praise {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#message {
+    color: #CAC9FF;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: normal;
+    width: 16.25rem;
+}
+
+/* box length = 2 x results card length - 2 x padding = 41rem */
+#summary-box {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    gap: 5rem;
+    width: 41rem;
+    border-radius: 10%;
+    background-color: white;
+}
+
+/* padding 0 because the box has the padding */
+#summary-blank {
+    width: 23rem;
+    padding: 0;
+}
+
+/* padding 0 because the box has the padding */
+#summary {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 23rem;
+    border-radius: 10%;
+    padding: 0;
+    gap: 1rem;
+}
+
+#summary span {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.trait {
+    display: flex;
+    border-radius: 10%;
+    justify-content: space-around;
+}
+
+div.trait#reaction {
+    background-color: hsla(0, 100%, 67%, .075);
+}
+
+span#reaction {
+    color: hsl(0, 100%, 67%);
+}
+
+div.trait#memory {
+    background-color: hsla(39, 100%, 56%, 0.075);
+}
+
+span#memory {
+    color: hsl(39, 100%, 56%);
+}
+
+div.trait#verbal {
+    background-color: hsla(166, 100%, 37%, 0.075);
+}
+
+span#verbal {
+    color: hsl(166, 100%, 37%);
+}
+
+div.trait#visual {
+    background-color: hsla(234, 85%, 45%, 0.075);
+}
+
+span#visual {
+    color: hsl(234, 85%, 45%);
+}
+
+.sum-score {
+    color: #303B59;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.sum-out-of {
+    opacity: 0.5;
+}
+
+button {
+    display: inline;
+    width: 18rem;
+    height: 3.5rem;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: white;
+    background-color: #303B59;
+    border-radius: 8rem;
+    border: 0;
+}
+
+button:hover {
+    background: linear-gradient(hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+}
+
+.attribution {
+    position: absolute;
+    bottom: 10%;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width:375px) {
+
+    /* make two rows for mobile display */
+    .wrapper {
+        grid-template-rows: 1fr 1fr;
+    }
+
+    /* remove blank area of summary card */
+    #summary-blank {
+        width: 0;
+    }
+
+    /* position summary box, remove margins, make same size as results box */
+    #summary-box {
+        margin-top: -3rem;
+        border-radius: 0;
+        grid-row: 2;
+        width: 18rem;
+        gap: 0;
+    }
+
+    .attribution {
+        bottom: -2rem;
+    }
+
+}
